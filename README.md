@@ -1,4 +1,4 @@
-# PrimeLister v2.6 🚀
+# PrimeLister v2.9 🚀
 
 **A high-performance, multi-threaded prime number generator in C++.**
 *From Excel trendlines to 52 million primes/second.*
@@ -90,7 +90,7 @@ cl /O2 /openmp /EHsc Version2.6.cpp /Fe:PrimeLister.exe
 ### Linux (GCC)
 
 
-g++ -O3 -fopenmp Version2.6.cpp -o PrimeLister
+g++ -O3 -fopenmp Version2.9.cpp -o PrimeLister
 
 
 
@@ -107,6 +107,7 @@ Run the executable. You will be asked for:
 
 * **Concept:** Pattern discovery via ImageJ & Excel macros.
 * **Version 1.0:** ImageJ Macro implementation.
-* **Version 2.6 (C++):** Fully optimized C++ implementation with OpenMP and bit-level optimizations.
+* **Version 2.9 (C++):** Fully optimized C++ implementation with OpenMP and bit-level optimizations.
 
 *Based on the "Single Array" logic: combining 6k-1 and 6k+1 candidates into one unified memory space to avoid sorting overhead.*
+
