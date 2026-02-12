@@ -78,13 +78,23 @@ The segments are distributed across all available CPU cores using `dynamic` sche
 
 ## 🚀 Build & Run
 
-### Windows (Visual Studio / MSVC)
+### Windows (Visual Studio 2026 / MSVC, empfohlen)
 
-Open the "Native Tools Command Prompt" and run:
+In der **x64 Native Tools Command Prompt for VS 2026**:
 
+```bat
+cl /std:c++17 /O2 /Ot /GL /openmp /EHsc /DNDEBUG "PrimeLister 2.9 multicore.cpp" /Fe:PrimeLister.exe
+```
 
-cl /O2 /openmp /EHsc Version2.6.cpp /Fe:PrimeLister.exe
+Optional fuer maximalen Speed (Link-Time-Optimierung):
 
+```bat
+link /LTCG PrimeLister.obj /OUT:PrimeLister.exe
+```
+
+Hinweis zur Laufzeit:
+- Das Programm kann eine **Experiment-Matrix** starten (Schedule + Segmentgroesse), um fuer dein System den besten Modus zu finden.
+- Fuer reproduzierbare Messungen: erst Matrix laufen lassen, danach denselben Modus mehrfach testen.
 
 
 ### Linux (GCC)
